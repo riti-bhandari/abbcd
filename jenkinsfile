@@ -1,0 +1,11 @@
+pipeline {
+  agent any
+  stages {
+    stage("Build") {
+      steps {
+        echo 'Helo World'
+        git branch: 'QFT101', url: 'https://github.com/riti-bhandari/abbcd.git'
+      }
+    }
+  }
+}
