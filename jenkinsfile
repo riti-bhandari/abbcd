@@ -10,6 +10,7 @@ pipeline {
       steps {
         echo 'Helo World'
         sh 'mvn clean verify sonar:sonar -Dsonar.host.url=http://13.201.118.201:9000/'
+        sh 'mvn sonar:sonar -Dsonar.token=7eb62ae8ff7e171b5fa083fab91d81eae1efe3b9'
         git branch: 'QFT101', url: 'https://github.com/riti-bhandari/abbcd.git'
       }
     }
