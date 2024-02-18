@@ -9,7 +9,7 @@ pipeline {
     stage("Build") {
       steps {
         echo 'Helo World'
-        sh 'mvn clean verify sonar:sonar -Dsonar.host.url=http://13.201.118.201:9000/projects'
+        sh 'mvn clean verify sonar:sonar -Dsonar.host.url=http://13.201.118.201:9000/'
         git branch: 'QFT101', url: 'https://github.com/riti-bhandari/abbcd.git'
       }
     }
