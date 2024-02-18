@@ -1,6 +1,9 @@
 pipeline {
-  agent any 
-          { label 'test' }
+   agent {
+        docker {
+            label 'test'
+        }
+    }
   stages {
     stage("Build") {
       steps {
@@ -10,3 +13,5 @@ pipeline {
     }
   }
 }
+
+
